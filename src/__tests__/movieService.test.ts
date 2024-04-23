@@ -37,4 +37,30 @@ describe("testing movieService API call", () => {
       "http://omdbapi.com/?apikey=b7ceda85&s=" + searchText
     );
   });
+
+  test("This should catch an empty array", async () => {
+    const mockMovieData: IMovie[] = [];
+
+    (axios.get as jest.Mock).mockResolvedValue({
+      data: { Search: mockMovieData },
+    });
+
+    const searchText: string = "";
+
+    const movie = await getData(searchText);
+
+    expect(movie).toEqual(mockMovieData);
+    expect(axios.get).toHaveBeenCalledWith(
+      "http://omdbapi.com/?apikey=b7ceda85&s=" + searchText
+    );
+
+    return [];
+  });
+
+  test("it should give reject the call", async () => {
+    const searchText: string = "harry";
+    (axios.get as jest.Mock).mockRejectedValue(searchText);
+    const movies = await getData("");
+    expect(movies).toHaveLength(0);
+  });
 });

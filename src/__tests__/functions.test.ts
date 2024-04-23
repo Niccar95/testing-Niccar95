@@ -7,25 +7,25 @@ describe("This function should sort movies", () => {
 
     const movies: IMovie[] = [
       {
-        Title: "first",
+        Title: "first movie",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
-        Year: "fff",
+        Year: "2000",
       },
 
       {
-        Title: "second",
+        Title: "second movie",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
-        Year: "fff",
+        Year: "1990",
       },
     ];
 
     movieSort(movies, desc);
 
-    expect(movies[0].Title).toBe("first");
+    expect(movies[0].Title).toBe("first movie");
   });
 
   test("This should sort by asc order", () => {
@@ -33,25 +33,25 @@ describe("This function should sort movies", () => {
 
     const movies: IMovie[] = [
       {
-        Title: "first",
+        Title: "first movie",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
-        Year: "fff",
+        Year: "2000",
       },
 
       {
-        Title: "second",
+        Title: "second movie",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
-        Year: "fff",
+        Year: "1990",
       },
     ];
 
     movieSort(movies, desc);
 
-    expect(movies[0].Title).toBe("second");
+    expect(movies[0].Title).toBe("second movie");
   });
 
   test("empty list", () => {
@@ -64,24 +64,31 @@ describe("This function should sort movies", () => {
   test("checking length of list", () => {
     const movies: IMovie[] = [
       {
-        Title: "first",
+        Title: "first movie",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
-        Year: "fff",
+        Year: "2000",
       },
 
       {
-        Title: "second",
+        Title: "second movie",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
-        Year: "fff",
+        Year: "1990",
       },
     ];
 
     movieSort(movies);
 
     expect(movies.length).toBe(2);
+  });
+
+  test("should handle empty movie list", () => {
+    const movies: IMovie[] = [];
+    movieSort(movies);
+
+    expect(movies.length).toBe(0);
   });
 });
