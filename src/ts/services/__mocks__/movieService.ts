@@ -2,11 +2,19 @@ import { IMovie } from "../../models/Movie";
 
 const movies: IMovie[] = [
   {
-    Title: "blah",
+    Title: "Movie 1",
     imdbID: "bsdsds",
     Type: "dddd",
     Poster: "fdjf",
     Year: "1990",
+  },
+
+  {
+    Title: "Movie 2",
+    imdbID: "bsdsds",
+    Type: "dddd",
+    Poster: "fdjf",
+    Year: "2001",
   },
 ];
 
