@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1713966464341" clover="3.2.0">
-  <project timestamp="1713966464342" name="All files">
-    <metrics statements="49" coveredstatements="42" conditionals="9" coveredconditionals="9" methods="10" coveredmethods="7" elements="68" coveredelements="58" complexity="0" loc="49" ncloc="49" packages="2" files="5" classes="5"/>
+<coverage generated="1713968445127" clover="3.2.0">
+  <project timestamp="1713968445127" name="All files">
+    <metrics statements="49" coveredstatements="45" conditionals="9" coveredconditionals="9" methods="10" coveredmethods="8" elements="68" coveredelements="62" complexity="0" loc="49" ncloc="49" packages="2" files="5" classes="5"/>
     <package name="ts">
-      <metrics statements="44" coveredstatements="37" conditionals="9" coveredconditionals="9" methods="7" coveredmethods="4"/>
+      <metrics statements="44" coveredstatements="40" conditionals="9" coveredconditionals="9" methods="7" coveredmethods="5"/>
       <file name="createHtml.ts" path="C:\Users\Lenovo\Desktop\Testning\testing-Niccar95\src\ts\createHtml.ts">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
@@ -20,11 +20,11 @@
         <line num="17" count="4" type="stmt"/>
       </file>
       <file name="displayNoResult.ts" path="C:\Users\Lenovo\Desktop\Testning\testing-Niccar95\src\ts\displayNoResult.ts">
-        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
       <file name="functions.ts" path="C:\Users\Lenovo\Desktop\Testning\testing-Niccar95\src\ts\functions.ts">
         <metrics statements="9" coveredstatements="9" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
