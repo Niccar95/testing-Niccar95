@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1713883936053" clover="3.2.0">
-  <project timestamp="1713883936053" name="All files">
-    <metrics statements="48" coveredstatements="41" conditionals="9" coveredconditionals="7" methods="10" coveredmethods="9" elements="67" coveredelements="57" complexity="0" loc="48" ncloc="48" packages="2" files="4" classes="4"/>
+<coverage generated="1713957432374" clover="3.2.0">
+  <project timestamp="1713957432374" name="All files">
+    <metrics statements="48" coveredstatements="40" conditionals="9" coveredconditionals="7" methods="10" coveredmethods="8" elements="67" coveredelements="55" complexity="0" loc="48" ncloc="48" packages="2" files="4" classes="4"/>
     <package name="ts">
-      <metrics statements="43" coveredstatements="36" conditionals="9" coveredconditionals="7" methods="7" coveredmethods="6"/>
+      <metrics statements="43" coveredstatements="35" conditionals="9" coveredconditionals="7" methods="7" coveredmethods="5"/>
       <file name="createHtml.ts" path="C:\Users\Lenovo\Desktop\Testning\testing-Niccar95\src\ts\createHtml.ts">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
@@ -32,29 +32,29 @@
         <line num="14" count="0" type="stmt"/>
       </file>
       <file name="movieApp.ts" path="C:\Users\Lenovo\Desktop\Testning\testing-Niccar95\src\ts\movieApp.ts">
-        <metrics statements="22" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <metrics statements="22" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
         <line num="27" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="28" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
       </file>
     </package>
     <package name="ts.services">

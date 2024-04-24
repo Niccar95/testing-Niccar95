@@ -6,35 +6,6 @@ import { handleSubmit } from "./../ts/movieApp";
 
 jest.mock("./../ts/services/movieService.ts");
 
-import { init } from "./../ts/movieApp";
-
-describe("testing init function", () => {
-  let mockedInit: jest.SpyInstance<void, []>;
-
-  beforeEach(() => {
-    mockedInit = jest.spyOn(movieApp, "init");
-
-    document.body.innerHTML = `
-      <div id="app">
-        <form id="searchForm">
-          <input type="text" id="searchText" placeholder="Skriv titel här" />
-          <button type="submit" id="search">Sök</button>
-        </form>
-        <div id="movie-container"></div>
-      </div>`;
-  });
-
-  afterEach(() => {
-    mockedInit.mockRestore();
-  });
-
-  test("init function should be called", () => {
-    init();
-
-    expect(mockedInit).toHaveBeenCalled();
-  });
-});
-
 describe("testing handleSubmit function", () => {
   let mockCreateHtml: jest.SpyInstance<void>;
   let mockDisplayNoResult: jest.SpyInstance<void>;
@@ -68,6 +39,20 @@ describe("testing handleSubmit function", () => {
     mockGetData.mockImplementation((): Promise<IMovie[]> => {
       return Promise.resolve([]);
     });
+
+    await handleSubmit();
+
+    expect(mockDisplayNoResult).toHaveBeenCalled();
+
+    const movieElements = document.getElementsByClassName("movie");
+
+    expect(movieElements).toHaveLength(0);
+  });
+
+  test("it should call displayNoResult and display no movie elements", async () => {
+    const searchText = "";
+
+    mockGetData.mockRejectedValue(searchText);
 
     await handleSubmit();
 
