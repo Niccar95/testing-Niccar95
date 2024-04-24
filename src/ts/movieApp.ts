@@ -1,4 +1,5 @@
 import { createHtml } from "./createHtml";
+import { displayNoResult } from "./displayNoResult";
 import { IMovie } from "./models/Movie";
 import { getData } from "./services/movieService";
 
@@ -33,11 +34,3 @@ export async function handleSubmit() {
     displayNoResult(container);
   }
 }
-
-export const displayNoResult = (container: HTMLDivElement) => {
-  let noMessage = document.createElement("p");
-
-  noMessage.innerHTML = "Inga sökresultat att visa";
-
-  container.appendChild(noMessage);
-};
