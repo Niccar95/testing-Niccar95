@@ -2,12 +2,12 @@ import { movieSort } from "../ts/functions";
 import { IMovie } from "../ts/models/Movie";
 
 describe("This function should sort movies", () => {
-  test("This should sort first movie at the top", () => {
+  test("This should sort by desc order starting with movie A at the top", () => {
     const desc: boolean = true;
 
     const movies: IMovie[] = [
       {
-        Title: "first movie",
+        Title: "A",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
@@ -15,7 +15,7 @@ describe("This function should sort movies", () => {
       },
 
       {
-        Title: "second movie",
+        Title: "B",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
@@ -25,15 +25,15 @@ describe("This function should sort movies", () => {
 
     movieSort(movies, desc);
 
-    expect(movies[0].Title).toBe("first movie");
+    expect(movies[0].Title).toBe("A");
   });
 
-  test("This should sort second movie at the top", () => {
+  test("This should sort by desc order starting with movie B at the top", () => {
     const desc: boolean = true;
 
     const movies: IMovie[] = [
       {
-        Title: "second movie",
+        Title: "B",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
@@ -41,7 +41,7 @@ describe("This function should sort movies", () => {
       },
 
       {
-        Title: "first movie",
+        Title: "A",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
@@ -51,15 +51,15 @@ describe("This function should sort movies", () => {
 
     movieSort(movies, desc);
 
-    expect(movies[0].Title).toBe("first movie");
+    expect(movies[0].Title).toBe("A");
   });
 
-  test("This should sort by asc order", () => {
+  test("This should sort by asc order starting with movie A at the top", () => {
     const desc: boolean = false;
 
     const movies: IMovie[] = [
       {
-        Title: "first movie",
+        Title: "A",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
@@ -67,7 +67,7 @@ describe("This function should sort movies", () => {
       },
 
       {
-        Title: "second movie",
+        Title: "B",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
@@ -77,15 +77,15 @@ describe("This function should sort movies", () => {
 
     movieSort(movies, desc);
 
-    expect(movies[0].Title).toBe("second movie");
+    expect(movies[0].Title).toBe("B");
   });
 
-  test("This should sort by asc order", () => {
+  test("This should sort by asc order starting with movie B at the top", () => {
     const desc: boolean = false;
 
     const movies: IMovie[] = [
       {
-        Title: "second movie",
+        Title: "B",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
@@ -93,7 +93,7 @@ describe("This function should sort movies", () => {
       },
 
       {
-        Title: "first movie",
+        Title: "A",
         imdbID: "drfr",
         Type: "ffr",
         Poster: "dff",
@@ -103,10 +103,10 @@ describe("This function should sort movies", () => {
 
     movieSort(movies, desc);
 
-    expect(movies[0].Title).toBe("second movie");
+    expect(movies[0].Title).toBe("B");
   });
 
-  test("checking length of list", () => {
+  test("This should check length of list", () => {
     const movies: IMovie[] = [
       {
         Title: "first movie",
@@ -137,10 +137,10 @@ describe("This function should sort movies", () => {
     expect(movies.length).toBe(0);
   });
 
-  test("This should not sort if title is the same", () => {
+  test("This should not sort in desc order if titles are the same", () => {
     const movies: IMovie[] = [
       {
-        Title: "movie",
+        Title: "A",
         imdbID: "drfr",
         Type: "1",
         Poster: "dff",
@@ -148,7 +148,7 @@ describe("This function should sort movies", () => {
       },
 
       {
-        Title: "movie",
+        Title: "A",
         imdbID: "drfr",
         Type: "2",
         Poster: "dff",
@@ -158,17 +158,17 @@ describe("This function should sort movies", () => {
     const desc = true;
     movieSort(movies, desc);
 
-    expect(movies[0].Title).toBe("movie");
-    expect(movies[1].Title).toBe("movie");
+    expect(movies[0].Title).toBe("A");
+    expect(movies[1].Title).toBe("A");
 
     expect(movies[0].Type).toBe("1");
     expect(movies[1].Type).toBe("2");
   });
 
-  test("This should not sort if title is the same", () => {
+  test("This should not sort in asc order if titles are the same", () => {
     const movies: IMovie[] = [
       {
-        Title: "movie",
+        Title: "B",
         imdbID: "drfr",
         Type: "1",
         Poster: "dff",
@@ -176,7 +176,7 @@ describe("This function should sort movies", () => {
       },
 
       {
-        Title: "movie",
+        Title: "B",
         imdbID: "drfr",
         Type: "2",
         Poster: "dff",
@@ -186,8 +186,8 @@ describe("This function should sort movies", () => {
     const desc = false;
     movieSort(movies, desc);
 
-    expect(movies[0].Title).toBe("movie");
-    expect(movies[1].Title).toBe("movie");
+    expect(movies[0].Title).toBe("B");
+    expect(movies[1].Title).toBe("B");
 
     expect(movies[0].Type).toBe("1");
     expect(movies[1].Type).toBe("2");
